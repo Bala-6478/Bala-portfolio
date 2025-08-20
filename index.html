@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Balavignesh A — Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Bala.jpg" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header>
+    <div class="nav">
+      <a href="#home" class="brand" aria-label="logo">
+        <span class="dot"></span>
+        <div>Balavignesh <span>A</span></div>
+      </a>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://drive.google.com/file/d/1EV_vMbJPJQn1zK_HeXcMkYxVm73mUwjt/view?usp=drivesdk" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="theme" id="themeBtn" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#contact" class="btn ghost">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://drive.google.com/file/d/1EV_vMbJPJQn1zK_HeXcMkYxVm73mUwjt/view?usp=drivesdk" target="_blank">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= Home Section ================= -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div data-aos="fade-up">
+            <p class="badge">Frontend Developer · Designer</p>
+            <h1 class="title">Hey, I'm <span class="accent">Balavignesh</span></h1>
+            <div class="typewrap">
+              I’m a <span id="typewriter"></span><span class="cursor">|</span>
+            </div>
+            <p class="subtitle">
+              Passionate about building clean, responsive interfaces with delightful micro-interactions.
+            </p>
+            <div class="cta">
+              <a class="btn" href="https://drive.google.com/file/d/1EV_vMbJPJQn1zK_HeXcMkYxVm73mUwjt/view?usp=drivesdk" target="_blank"><i class="fa-solid fa-file-lines"></i> View Resume</a>
+              <a class="btn ghost" href="#contact"><i class="fa-regular fa-paper-plane"></i> Contact</a>
+            </div>
+          </div>
+
+          <div data-aos="zoom-in" class="card-hero">
+            <div class="avatar">
+              <img src="Bala.jpg" alt="Profile" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/FFFFFF?text=Error';">
+            </div>
+            <div>
+              <div style="font-weight:700">Balavignesh A</div>
+              <div style="color:var(--muted); font-size:14px">Erode, Tamil Nadu · India</div>
+              <div class="socials" style="margin-top:10px">
+                <a href="https://github.com/Bala-6478" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/bala.vignesh.58760" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/balavignesh-a-780a13238" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://youtube.com/@balavignesh3091?si=jDi-pjBPCULry1Vm" aria-label="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/_.b_a_l_.a__/?__pwa=1#" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= About Section ================= -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">About Me</h2>
+        <p class="section-sub" data-aos="fade-right" data-aos-delay="100">
+          A little bit about my professional journey.
+        </p>
+        <div class="about-grid">
+            <div class="professional-summary" data-aos="fade-right">
+                <h3><i class="fa-solid fa-user-tie"></i> Professional Summary</h3>
+                <p>
+                    I'm a passionate developer with practical experience in building responsive and scalable web applications. My expertise spans across multiple technologies including HTML, CSS, JavaScript, and Java. I am proficient in both front-end and back-end development, and I follow Agile methodologies to maintain clean code practices.
+                </p>
+                <div class="stat-boxes">
+                    <div class="stat-box">
+                        <div class="number">1+</div>
+                        <div class="label">Years Experience</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">10+</div>
+                        <div class="label">Projects Completed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-details" data-aos="fade-left">
+                <div class="contact-card location">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <div class="label">Location</div>
+                        <div class="value">Erode, Tamil Nadu</div>
+                    </div>
+                </div>
+                <div class="contact-card phone">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <div class="label">Phone</div>
+                        <div class="value">+91 9952876478</div>
+                    </div>
+                </div>
+                <div class="contact-card email">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <div class="label">Email</div>
+                        <div class="value">balavip073@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Education Section ================= -->
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">Education</h2>
+        <p class="section-sub" data-aos="fade-right" data-aos-delay="100">
+          My academic background and qualifications.
+        </p>
+        <div class="education-grid">
+          <div class="education-card mca-card" data-aos="fade-up">
+            <div class="education-header">
+                <div class="education-icon"><i class="fa-solid fa-book"></i></div>
+                <h3>Master of Computer Application<span>NANDHA ENGINEERING COLLEGE, ERODE</span></h3>
+            </div>
+            <div class="education-details">
+                <span>Duration:</span>
+                <strong>Sep 2023 - May 2025</strong>
+            </div>
+            <div class="education-details">
+                <span>CGPA:</span>
+                <strong>8.2</strong>
+            </div>
+          </div>
+          <div class="education-card bsc-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="education-header">
+                <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>Bachelor of Computer Science<span>NANDHA ARTS AND SCIENCE COLLEGE, ERODE</span></h3>
+            </div>
+            <div class="education-details">
+                <span>Duration:</span>
+                <strong>Jul 2020 - May 2023</strong>
+            </div>
+            <div class="education-details">
+                <span>CGPA:</span>
+                <strong>7.9</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Certificates Section ================= -->
+    <section id="certificates">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Certificates</h2>
+            <p class="section-sub" data-aos="fade-right" data-aos-delay="100">
+                My professional certifications and qualifications.
+            </p>
+            <div class="certificates-grid">
+                <a href="https://drive.google.com/file/d/1RCw-slqHMCtZmkhtdqh-r9KGNnjoDSQu/view?usp=drivesdk" target="_blank" class="certificate-card java-cert" data-aos="fade-up">
+                    <div class="certificate-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Programming in Java </h3>
+                    <span class="cert-badge">Geeks for Geeks</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1R8kcGlxk_nZ4qMYN_UIKKpOf2H_qbjiQ/view?usp=drivesdk" target="_blank" class="certificate-card sql-cert" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>SQL - Sololearn</h3>
+                    <span class="cert-badge">Certified</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Skills Section ================= -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">Skills</h2>
+        <p class="section-sub" data-aos="fade-right" data-aos-delay="100">
+          My technical capabilities and tools I'm proficient with.
+        </p>
+        <div class="skills-grid">
+          <!-- Skill Card 1: HTML -->
+          <div class="skill-card html-theme" data-aos="fade-up" data-level="85">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+              <h3>HTML</h3>
+            </div>
+            <div class="skill-details">
+              <span>Proficiency</span>
+              <span class="skill-percentage">0%</span>
+            </div>
+            <div class="bar"><span style="--skill-level: 85%;"></span></div>
+          </div>
+          <!-- Skill Card 2: CSS -->
+          <div class="skill-card css-theme" data-aos="fade-up" data-aos-delay="100" data-level="75">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+              <h3>CSS</h3>
+            </div>
+            <div class="skill-details">
+              <span>Proficiency</span>
+              <span class="skill-percentage">0%</span>
+            </div>
+            <div class="bar"><span style="--skill-level: 75%;"></span></div>
+          </div>
+          <!-- Skill Card 3: Java -->
+          <div class="skill-card java-theme" data-aos="fade-up" data-aos-delay="200" data-level="80">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+              <h3>Java</h3>
+            </div>
+            <div class="skill-details">
+              <span>Proficiency</span>
+              <span class="skill-percentage">0%</span>
+            </div>
+            <div class="bar"><span style="--skill-level: 80%;"></span></div>
+          </div>
+          <!-- Skill Card 4: JavaScript -->
+          <div class="skill-card js-theme" data-aos="fade-up" data-aos-delay="300" data-level="50">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+              <h3>JavaScript</h3>
+            </div>
+            <div class="skill-details">
+              <span>Proficiency</span>
+              <span class="skill-percentage">0%</span>
+            </div>
+            <div class="bar"><span style="--skill-level: 50%;"></span></div>
+          </div>
+          <!-- Skill Card 5: Python -->
+          <div class="skill-card python-theme" data-aos="fade-up" data-aos-delay="400" data-level="65">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+              <h3>Python</h3>
+            </div>
+            <div class="skill-details">
+              <span>Proficiency</span>
+              <span class="skill-percentage">0%</span>
+            </div>
+            <div class="bar"><span style="--skill-level: 65%;"></span></div>
+          </div>
+          <!-- Skill Card 6: WordPress -->
+          <div class="skill-card wp-theme" data-aos="fade-up" data-aos-delay="500" data-level="85">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-brands fa-wordpress"></i></div>
+              <h3>WordPress</h3>
+            </div>
+            <div class="skill-details">
+              <span>Proficiency</span>
+              <span class="skill-percentage">0%</span>
+            </div>
+            <div class="bar"><span style="--skill-level: 85%;"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Projects Section ================= -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">Projects</h2>
+        <p class="section-sub" data-aos="fade-right" data-aos-delay="100">
+          Selected projects and experiments.
+        </p>
+
+        <div class="projects-grid" data-aos="fade-up" data-aos-delay="180">
+          
+            <!-- Project Card 1: Media Converter -->
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-header">
+                    <div class="project-icon p-icon-1"><i class="fa-solid fa-file-video"></i></div>
+                    <div class="title-group">
+                        <h3>Media Converter</h3>
+                    </div>
+                </div>
+                <p class="description">A versatile tool to convert various media file formats directly in your browser.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Web APIs</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20Converter">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <!-- Project Card 2: QR Code Generator -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-header">
+                    <div class="project-icon p-icon-2"><i class="fa-solid fa-qrcode"></i></div>
+                    <div class="title-group">
+                        <h3>QR Code Generator</h3>
+                    </div>
+                </div>
+                <p class="description">A simple and effective tool to generate QR codes from text or URLs instantly.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">API</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/QR%20CODE%20/OR">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <!-- Project Card 3: Number Guessing Game -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-header">
+                    <div class="project-icon p-icon-3"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="title-group">
+                        <h3>Number Guessing Game</h3>
+                    </div>
+                </div>
+                <p class="description">A fun and interactive game where you try to guess a secret number.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Number%20Guessing%20Game/">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <!-- Project Card 4: Web ZIP Utility -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-header">
+                    <div class="project-icon p-icon-4"><i class="fa-solid fa-file-zipper"></i></div>
+                    <div class="title-group">
+                        <h3>Web ZIP Utility</h3>
+                    </div>
+                </div>
+                <p class="description">A web-based tool to create, view, and extract ZIP archives directly in the browser.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Web APIs</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Web%20ZIP%20Utility/">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <!-- Project Card 5: Portfolio -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-header">
+                    <div class="project-icon p-icon-5"><i class="fa-solid fa-id-card"></i></div>
+                    <div class="title-group">
+                        <h3>Responsive Portfolio</h3>
+                    </div>
+                </div>
+                <p class="description">The very site you're looking at, designed to be modern and fully responsive.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">AOS</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="#">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <!-- Project Card 6: Inventory Management -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-header">
+                    <div class="project-icon p-icon-6"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <div class="title-group">
+                        <h3>Inventory Management</h3>
+                    </div>
+                </div>
+                <p class="description">A system to efficiently manage items, track stock levels, and handle inventory.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/Index">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+            
+            <!-- Project Card 7: Live Weather UI -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-header">
+                    <div class="project-icon p-icon-7"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <div class="title-group">
+                        <h3>Live Weather UI</h3>
+                    </div>
+                </div>
+                <p class="description">A clean weather interface that displays current conditions, using a dummy API.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">API</span>
+                    <span class="tech-tag">UI/UX</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Live%20Weather%20UI%20(Dummy%20API-Free)/">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+            
+            <!-- Project Card 8: To-Do List -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="project-header">
+                    <div class="project-icon p-icon-8"><i class="fa-solid fa-list-check"></i></div>
+                    <div class="title-group">
+                        <h3>To-Do List</h3>
+                    </div>
+                </div>
+                <p class="description">A simple and effective to-do list application to manage your daily tasks.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/To-Do%20List%20Web%20App/">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+            
+            <!-- Project Card 9: Loan EMI Calculator -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                <div class="project-header">
+                    <div class="project-icon p-icon-9"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="title-group">
+                        <h3>Loan EMI Calculator</h3>
+                    </div>
+                </div>
+                <p class="description">A handy tool to calculate Equated Monthly Installments (EMI) for loans.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-footer">
+                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Loan%20EMI%20Calculator/">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Contact Section ================= -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Let's Work Together</h2>
+            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+                I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.
+            </p>
+            <div class="contact-grid">
+                <div class="contact-info-wrap" data-aos="fade-right">
+                    <div class="contact-card email">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div class="label">Email</div>
+                            <div class="value"><a href="mailto:balavip073@gmail.com" style="color: inherit; text-decoration: none;">balavip073@gmail.com</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-card phone">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="label">Phone</div>
+                            <div class="value">+91 9952876478</div>
+                        </div>
+                    </div>
+                    <div class="contact-card location">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div class="label">Location</div>
+                            <div class="value">Erode, Tamil Nadu, India</div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/Bala-6478" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/balavignesh-a-780a13238" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/_.b_a_l_.a__/?__pwa=1#" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap" data-aos="fade-left">
+                    <h3>Send a Message</h3>
+                    <a href="https://wa.me/919952876478" class="btn" target="_blank" style="width: 100%; justify-content: center;">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 1.2em;"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer>
+    <p>&copy; 2025 Balavignesh A. All rights reserved.</p>
+  </footer>
+
+  <!-- ================= Project Modal ================= -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-window">
+        <div class="modal-header">
+            <h3 class="modal-title">Project Preview</h3>
+            <div class="modal-controls">
+                <button id="modalMinimize" title="Minimize"><i class="fa-solid fa-window-minimize"></i></button>
+                <button id="modalMaximize" title="Maximize"><i class="fa-regular fa-window-maximize"></i></button>
+                <button id="modalClose" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="modal-body">
+            <iframe id="projectFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+  </div>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
