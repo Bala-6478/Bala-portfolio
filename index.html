@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
   <title>Balavignesh A — Portfolio</title>
 
   <!-- Favicon -->
@@ -14,9 +14,19 @@
 
   <!-- AOS Animations -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-
+  
   <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          emailjs.init({
+              publicKey: "YOUR_PUBLIC_KEY", // Replace with your EmailJS public key
+          });
+      })();
+  </script>
 </head>
 <body>
 
@@ -34,7 +44,8 @@
           <li><a href="#education">Education</a></li>
           <li><a href="#certificates">Certificates</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Project</a></li>
+          <li><a href="#publications">Publication</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="https://drive.google.com/file/d/1EV_vMbJPJQn1zK_HeXcMkYxVm73mUwjt/view?usp=drivesdk" target="_blank">Resume</a></li>
         </ul>
@@ -55,14 +66,15 @@
       <a href="#education">Education</a>
       <a href="#certificates">Certificates</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="#projects">Project</a>
+      <a href="#publications">Publication</a>
       <a href="#contact">Contact</a>
       <a href="https://drive.google.com/file/d/1EV_vMbJPJQn1zK_HeXcMkYxVm73mUwjt/view?usp=drivesdk" target="_blank">Resume</a>
     </div>
   </header>
 
   <main>
-    <!-- ================= Home Section ================= -->
+    <!-- ================= Home ================= -->
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-grid">
@@ -104,46 +116,46 @@
     <!-- ================= About Section ================= -->
     <section id="about">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-right">About Me</h2>
+        <h2 class="section-title" data-aos="fade-right">About <span class="accent">Me</span></h2>
         <p class="section-sub" data-aos="fade-right" data-aos-delay="100">
-          A little bit about my professional journey.
+          A narrative of my professional evolution and core mission.
         </p>
         <div class="about-grid">
             <div class="professional-summary" data-aos="fade-right">
-                <h3><i class="fa-solid fa-user-tie"></i> Professional Summary</h3>
+                <h3><i class="fa-solid fa-rocket"></i> Professional Journey</h3>
                 <p>
-                    I'm a passionate developer with practical experience in building responsive and scalable web applications. My expertise spans across multiple technologies including HTML, CSS, JavaScript, and Java. I am proficient in both front-end and back-end development, and I follow Agile methodologies to maintain clean code practices.
+                    I'm a dedicated developer with a strong foundation in building responsive, high-performance web applications. My expertise spans HTML, CSS, JavaScript, and Java, enabling me to tackle challenges across the full development stack. I am passionate about crafting seamless user experiences and writing clean, maintainable code using Agile methodologies.
                 </p>
                 <div class="stat-boxes">
                     <div class="stat-box">
                         <div class="number">1+</div>
-                        <div class="label">Years Experience</div>
+                        <div class="label">Years of Growth</div>
                     </div>
                     <div class="stat-box">
                         <div class="number">10+</div>
-                        <div class="label">Projects Completed</div>
+                        <div class="label">Projects Shipped</div>
                     </div>
                 </div>
             </div>
-            <div class="contact-details" data-aos="fade-left">
+            <div class="about-contact-wrap" data-aos="fade-left">
                 <div class="contact-card location">
                     <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                     <div>
-                        <div class="label">Location</div>
+                        <div class="label">Primary Base</div>
                         <div class="value">Erode, Tamil Nadu</div>
                     </div>
                 </div>
                 <div class="contact-card phone">
                     <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                     <div>
-                        <div class="label">Phone</div>
+                        <div class="label">Direct Reach</div>
                         <div class="value">+91 9952876478</div>
                     </div>
                 </div>
                 <div class="contact-card email">
                     <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                     <div>
-                        <div class="label">Email</div>
+                        <div class="label">Official Inbox</div>
                         <div class="value">balavip073@gmail.com</div>
                     </div>
                 </div>
@@ -152,7 +164,7 @@
       </div>
     </section>
 
-    <!-- ================= Education Section ================= -->
+    <!-- ================= Education ================= -->
     <section id="education">
       <div class="container">
         <h2 class="section-title" data-aos="fade-right">Education</h2>
@@ -163,7 +175,7 @@
           <div class="education-card mca-card" data-aos="fade-up">
             <div class="education-header">
                 <div class="education-icon"><i class="fa-solid fa-book"></i></div>
-                <h3>Master of Computer Application<span>NANDHA ENGINEERING COLLEGE, ERODE</span></h3>
+                <h3>Master of Computer Application<span>NANDHA ENGINEERING COLLEGE, Erode</span></h3>
             </div>
             <div class="education-details">
                 <span>Duration:</span>
@@ -192,7 +204,7 @@
       </div>
     </section>
 
-    <!-- ================= Certificates Section ================= -->
+    <!-- ================= Certificates ================= -->
     <section id="certificates">
         <div class="container">
             <h2 class="section-title" data-aos="fade-right">Certificates</h2>
@@ -222,7 +234,6 @@
           My technical capabilities and tools I'm proficient with.
         </p>
         <div class="skills-grid">
-          <!-- Skill Card 1: HTML -->
           <div class="skill-card html-theme" data-aos="fade-up" data-level="85">
             <div class="skill-header">
               <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
@@ -234,7 +245,6 @@
             </div>
             <div class="bar"><span style="--skill-level: 85%;"></span></div>
           </div>
-          <!-- Skill Card 2: CSS -->
           <div class="skill-card css-theme" data-aos="fade-up" data-aos-delay="100" data-level="75">
             <div class="skill-header">
               <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
@@ -246,7 +256,6 @@
             </div>
             <div class="bar"><span style="--skill-level: 75%;"></span></div>
           </div>
-          <!-- Skill Card 3: Java -->
           <div class="skill-card java-theme" data-aos="fade-up" data-aos-delay="200" data-level="80">
             <div class="skill-header">
               <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
@@ -258,8 +267,7 @@
             </div>
             <div class="bar"><span style="--skill-level: 80%;"></span></div>
           </div>
-          <!-- Skill Card 4: JavaScript -->
-          <div class="skill-card js-theme" data-aos="fade-up" data-aos-delay="300" data-level="50">
+          <div class="skill-card js-theme" data-aos="fade-up" data-aos-delay="300" data-level="65">
             <div class="skill-header">
               <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
               <h3>JavaScript</h3>
@@ -268,9 +276,8 @@
               <span>Proficiency</span>
               <span class="skill-percentage">0%</span>
             </div>
-            <div class="bar"><span style="--skill-level: 50%;"></span></div>
+            <div class="bar"><span style="--skill-level: 65%;"></span></div>
           </div>
-          <!-- Skill Card 5: Python -->
           <div class="skill-card python-theme" data-aos="fade-up" data-aos-delay="400" data-level="65">
             <div class="skill-header">
               <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
@@ -282,7 +289,6 @@
             </div>
             <div class="bar"><span style="--skill-level: 65%;"></span></div>
           </div>
-          <!-- Skill Card 6: WordPress -->
           <div class="skill-card wp-theme" data-aos="fade-up" data-aos-delay="500" data-level="85">
             <div class="skill-header">
               <div class="skill-icon"><i class="fa-brands fa-wordpress"></i></div>
@@ -298,202 +304,196 @@
       </div>
     </section>
 
-    <!-- ================= Projects Section ================= -->
+    <!-- ================= Project Section ================= -->
     <section id="projects">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-right">Projects</h2>
+        <h2 class="section-title" data-aos="fade-right">Project</h2>
         <p class="section-sub" data-aos="fade-right" data-aos-delay="100">
-          Selected projects and experiments.
+          A selection of my professional work categorized by type.
         </p>
 
-        <div class="projects-grid" data-aos="fade-up" data-aos-delay="180">
-          
-            <!-- Project Card 1: Media Converter -->
-            <div class="project-card" data-aos="fade-up">
+        <div class="project-filters" data-aos="fade-up">
+            <button class="filter-btn active" data-target="all">All</button>
+            <button class="filter-btn" data-target="npm">NPM Package</button>
+            <button class="filter-btn" data-target="web">Web App</button>
+            <button class="filter-btn" data-target="design">Design</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-category="npm" data-aos="fade-up">
+                <div class="project-type-badge type-npm">NPM Package</div>
+                <div class="project-header">
+                    <div class="project-icon p-icon-npm"><i class="fa-solid fa-qrcode"></i></div>
+                    <div class="title-group">
+                        <h3>QRCode_Secure</h3>
+                    </div>
+                </div>
+                <p class="description">A secure and efficient utility for generating and managing QR codes with a focus on data privacy and integrity.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS3</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://qr-code-secure-new.onrender.com/" class="project-btn demo-btn" target="_blank">Demo</a>
+                    <a href="https://github.com/Bala-6478/QRCode_Secure.git" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="npm" data-aos="fade-up" data-aos-delay="50">
+                <div class="project-type-badge type-npm">NPM Package</div>
+                <div class="project-header">
+                    <div class="project-icon p-icon-planner"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="title-group">
+                        <h3>Skill_Planner</h3>
+                    </div>
+                </div>
+                <p class="description">An intuitive application designed to help users structure their learning paths and track skill acquisition progress.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS3</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://skill-planner-l2fa.onrender.com" class="project-btn demo-btn" target="_blank">Demo</a>
+                    <a href="https://github.com/Bala-6478/Skill_Planner.git" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-type-badge type-web">Web App</div>
                 <div class="project-header">
                     <div class="project-icon p-icon-1"><i class="fa-solid fa-file-video"></i></div>
                     <div class="title-group">
                         <h3>Media Converter</h3>
                     </div>
                 </div>
-                <p class="description">A versatile tool to convert various media file formats directly in your browser.</p>
+                <p class="description">High-speed, browser-side media conversion utility supporting multiple file formats without server uploads.</p>
                 <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">HTML5</span>
                     <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Web APIs</span>
+                    <span class="tech-tag">FFmpeg.js</span>
                 </div>
                 <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20Converter">Demo</a>
+                    <a href="https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20Converter" class="project-btn demo-btn" target="_blank">Demo</a>
                     <a href="#" class="project-btn code-btn" target="_blank">Code</a>
                 </div>
             </div>
 
-            <!-- Project Card 2: QR Code Generator -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <!-- Project 4 -->
+            <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="150">
+                <div class="project-type-badge type-web">Web App</div>
                 <div class="project-header">
-                    <div class="project-icon p-icon-2"><i class="fa-solid fa-qrcode"></i></div>
-                    <div class="title-group">
-                        <h3>QR Code Generator</h3>
-                    </div>
-                </div>
-                <p class="description">A simple and effective tool to generate QR codes from text or URLs instantly.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">API</span>
-                </div>
-                <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/QR%20CODE%20/OR">Demo</a>
-                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
-                </div>
-            </div>
-
-            <!-- Project Card 3: Number Guessing Game -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-header">
-                    <div class="project-icon p-icon-3"><i class="fa-solid fa-gamepad"></i></div>
-                    <div class="title-group">
-                        <h3>Number Guessing Game</h3>
-                    </div>
-                </div>
-                <p class="description">A fun and interactive game where you try to guess a secret number.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Number%20Guessing%20Game/">Demo</a>
-                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
-                </div>
-            </div>
-
-            <!-- Project Card 4: Web ZIP Utility -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-header">
-                    <div class="project-icon p-icon-4"><i class="fa-solid fa-file-zipper"></i></div>
-                    <div class="title-group">
-                        <h3>Web ZIP Utility</h3>
-                    </div>
-                </div>
-                <p class="description">A web-based tool to create, view, and extract ZIP archives directly in the browser.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Web APIs</span>
-                </div>
-                <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Web%20ZIP%20Utility/">Demo</a>
-                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
-                </div>
-            </div>
-
-            <!-- Project Card 5: Portfolio -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-header">
-                    <div class="project-icon p-icon-5"><i class="fa-solid fa-id-card"></i></div>
-                    <div class="title-group">
-                        <h3>Responsive Portfolio</h3>
-                    </div>
-                </div>
-                <p class="description">The very site you're looking at, designed to be modern and fully responsive.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">AOS</span>
-                </div>
-                <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/SKILL/SKILL">Demo</a>
-                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
-                </div>
-            </div>
-
-            <!-- Project Card 6: Inventory Management -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-header">
-                    <div class="project-icon p-icon-6"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <div class="project-icon p-icon-2"><i class="fa-solid fa-boxes-stacked"></i></div>
                     <div class="title-group">
                         <h3>Inventory Management</h3>
                     </div>
                 </div>
-                <p class="description">A system to efficiently manage items, track stock levels, and handle inventory.</p>
+                <p class="description">Advanced inventory tracking system featuring real-time stock updates, category filtering, and item history.</p>
                 <div class="project-tech">
                     <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">CSS Grid</span>
+                    <span class="tech-tag">LocalDB</span>
                 </div>
                 <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/Index">Demo</a>
-                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
-                </div>
-            </div>
-            
-            <!-- Project Card 7: Live Weather UI -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                <div class="project-header">
-                    <div class="project-icon p-icon-7"><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div class="title-group">
-                        <h3>Live Weather UI</h3>
-                    </div>
-                </div>
-                <p class="description">A clean weather interface that displays current conditions, using a dummy API.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">API</span>
-                    <span class="tech-tag">UI/UX</span>
-                </div>
-                <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Live%20Weather%20UI%20(Dummy%20API-Free)/">Demo</a>
-                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
-                </div>
-            </div>
-            
-            <!-- Project Card 8: To-Do List -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-                <div class="project-header">
-                    <div class="project-icon p-icon-8"><i class="fa-solid fa-list-check"></i></div>
-                    <div class="title-group">
-                        <h3>To-Do List</h3>
-                    </div>
-                </div>
-                <p class="description">A simple and effective to-do list application to manage your daily tasks.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/To-Do%20List%20Web%20App/">Demo</a>
-                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
-                </div>
-            </div>
-            
-            <!-- Project Card 9: Loan EMI Calculator -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-                <div class="project-header">
-                    <div class="project-icon p-icon-9"><i class="fa-solid fa-calculator"></i></div>
-                    <div class="title-group">
-                        <h3>Loan EMI Calculator</h3>
-                    </div>
-                </div>
-                <p class="description">A handy tool to calculate Equated Monthly Installments (EMI) for loans.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <div class="project-footer">
-                    <a href="javascript:void(0);" class="project-btn demo-btn" data-url="https://balavignesh2025.neocities.org/Project/Loan%20EMI%20Calculator/">Demo</a>
+                    <a href="https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/Index" class="project-btn demo-btn" target="_blank">Demo</a>
                     <a href="#" class="project-btn code-btn" target="_blank">Code</a>
                 </div>
             </div>
 
+            <!-- Project 5 -->
+            <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-type-badge type-web">Web App</div>
+                <div class="project-header">
+                    <div class="project-icon p-icon-3"><i class="fa-solid fa-file-zipper"></i></div>
+                    <div class="title-group">
+                        <h3>Web ZIP Utility</h3>
+                    </div>
+                </div>
+                <p class="description">Streamlined utility for compressing and extracting ZIP files directly within the client interface.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">JSZip</span>
+                    <span class="tech-tag">File API</span>
+                    <span class="tech-tag">Web API</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://balavignesh2025.neocities.org/Project/Web%20ZIP%20Utility/" class="project-btn demo-btn" target="_blank">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="250">
+                <div class="project-type-badge type-design">Design</div>
+                <div class="project-header">
+                    <div class="project-icon p-icon-4"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="title-group">
+                        <h3>Number Guessing Game</h3>
+                    </div>
+                </div>
+                <p class="description">An interactive logic showcase with dynamic difficulty levels and sleek, modern dark-mode aesthetics.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">UI Design</span>
+                    <span class="tech-tag">ES6+</span>
+                    <span class="tech-tag">Animation</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://balavignesh2025.neocities.org/Project/Number%20Guessing%20Game/" class="project-btn demo-btn" target="_blank">Demo</a>
+                    <a href="#" class="project-btn code-btn" target="_blank">Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="github-more" data-aos="fade-up">
+            <a href="https://github.com/Bala-6478" target="_blank" class="github-glow-btn">
+                <i class="fa-brands fa-github"></i>
+                <span>Explore More on GitHub</span>
+            </a>
         </div>
       </div>
     </section>
 
-    <!-- ================= Contact Section ================= -->
+    <!-- ================= Publication Section ================= -->
+    <section id="publications">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">Publication & Copyright</h2>
+        <p class="section-sub" data-aos="fade-right" data-aos-delay="100">
+          Academic research contributions and intellectual property.
+        </p>
+
+        <div class="pub-card" data-aos="zoom-in">
+          <div class="pub-header">
+            <div class="pub-icon"><i class="fa-solid fa-scroll"></i></div>
+            <div class="pub-title">
+              <h3>Hybrid DWT-SVD and Compressive Sensing-Based Watermarking for Robust Medical Image Authentication</h3>
+              <div class="pub-meta">
+                <span><i class="fa-solid fa-building-columns"></i> IEEE Conference</span>
+                <span><i class="fa-solid fa-calendar-days"></i> 2025</span>
+              </div>
+            </div>
+          </div>
+          <div class="pub-desc">
+            This research presents a robust hybrid watermarking framework utilizing Discrete Wavelet Transform (DWT), Singular Value Decomposition (SVD), and Compressive Sensing (CS) techniques to ensure secure authentication and integrity verification of medical images in telemedicine environments.
+          </div>
+          <div class="cta">
+            <a href="https://share.google/GHm1Ebl6Sb8XCwClL" class="btn" target="_blank">
+              <i class="fa-solid fa-file-pdf"></i> View on IEEE Xplore
+            </a>
+            <p style="color: var(--muted); font-size: 13px; margin-top: 10px; font-weight: 500;">
+              &copy; 2025 IEEE. All rights reserved. Registered research publication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Let's Work Together</h2>
+            <h2 class="section-title" data-aos="fade-up">Let's Work</h2>
             <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
                 I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.
             </p>
@@ -528,9 +528,21 @@
                 </div>
                 <div class="contact-form-wrap" data-aos="fade-left">
                     <h3>Send a Message</h3>
-                    <a href="https://wa.me/919952876478" class="btn" target="_blank" style="width: 100%; justify-content: center;">
-                        <i class="fa-brands fa-whatsapp" style="font-size: 1.2em;"></i> Chat on WhatsApp
-                    </a>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="from_name">Name</label>
+                            <input type="text" name="from_name" id="from_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_id">Email</label>
+                            <input type="email" name="email_id" id="email_id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -542,28 +554,9 @@
     <p>&copy; 2025 Balavignesh A. All rights reserved.</p>
   </footer>
 
-  <!-- ================= Project Modal ================= -->
-  <div class="modal-overlay" id="projectModal">
-    <div class="modal-window">
-        <div class="modal-header">
-            <h3 class="modal-title">Project Preview</h3>
-            <div class="modal-controls">
-                <button id="modalMinimize" title="Minimize"><i class="fa-solid fa-window-minimize"></i></button>
-                <button id="modalMaximize" title="Maximize"><i class="fa-regular fa-window-maximize"></i></button>
-                <button id="modalClose" title="Close"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-        </div>
-        <div class="modal-body">
-            <iframe id="projectFrame" src="" frameborder="0"></iframe>
-        </div>
-    </div>
-  </div>
-
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  
   <!-- External JS -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
-
