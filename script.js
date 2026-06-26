@@ -30,40 +30,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     }));
   }
 
-  /* 3-dot overflow menu */
-  const dotTrigger=document.getElementById('dotTrigger');
-  const overflowMenu=document.getElementById('overflowMenu');
-  const overflowBackdrop=document.getElementById('overflowBackdrop');
-  let overflowOpen=false;
-
-  function openOverflow(){
-    overflowOpen=true;
-    overflowMenu.classList.add('open');
-    overflowBackdrop.classList.add('open');
-    dotTrigger.classList.add('open');
-  }
-  function closeOverflow(){
-    overflowOpen=false;
-    overflowMenu.classList.remove('open');
-    overflowBackdrop.classList.remove('open');
-    dotTrigger.classList.remove('open');
-  }
-  if(dotTrigger){
-    dotTrigger.addEventListener('click',function(e){
-      e.preventDefault();e.stopPropagation();
-      overflowOpen?closeOverflow():openOverflow();
-    });
-  }
-  if(overflowBackdrop) overflowBackdrop.addEventListener('click',closeOverflow);
-  if(overflowMenu){
-    overflowMenu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click',closeOverflow);
-    });
-  }
-
   /* ===== STABLE TYPEWRITER — natural variable speed, zero layout shift ===== */
   const tw=document.getElementById('typewriter');
-  const words=['Frontend Developer','UI/UX Designer','Software Engineer'];
+  const words=['Frontend Developer','Web Developer','UI/UX Enthusiast'];
   let wi=0,ci=0,del=false,paused=false;
   function type(){
     const w=words[wi];
@@ -71,10 +40,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(paused){paused=false;del=true;sp=2400;setTimeout(type,sp);return;}
     if(del){
       tw.textContent=w.substring(0,ci-1);ci--;
-      sp=40+Math.random()*30;/* fast, slightly varied delete */
+      sp=40+Math.random()*30;
     } else {
       tw.textContent=w.substring(0,ci+1);ci++;
-      sp=90+Math.random()*60;/* human-like variable type speed */
+      sp=90+Math.random()*60;
     }
     if(!del&&ci===w.length){paused=true;sp=100;}
     else if(del&&ci===0){del=false;wi=(wi+1)%words.length;sp=420;}
@@ -84,20 +53,20 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   /* Active nav on scroll + desktop header glass effect */
   const sections=document.querySelectorAll('main section');
-  const allNavLinks=document.querySelectorAll('nav a, .mobile-menu a, .mobile-bottom-nav a[data-section], .overflow-menu a[data-section]');
+  const allNavLinks=document.querySelectorAll('nav a, .mobile-menu a');
   const hdrEl=document.querySelector('header');
   window.addEventListener('scroll',()=>{
     /* Header glass */
     if(window.scrollY>40){hdrEl.classList.add('scrolled');}
     else{hdrEl.classList.remove('scrolled');}
+    
     /* Active section */
     let current='';
     sections.forEach(s=>{if(pageYOffset>=s.offsetTop-100)current=s.getAttribute('id');});
     allNavLinks.forEach(link=>{
       link.classList.remove('active');
       const href=(link.getAttribute('href')||'').replace('#','');
-      const sec=link.dataset.section;
-      if(href===current||sec===current)link.classList.add('active');
+      if(href===current)link.classList.add('active');
     });
   },{passive:true});
 
@@ -184,28 +153,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   /* ===== MOBILE ENHANCEMENTS ===== */
   if(window.innerWidth<=780){
-
-    /* ===== IMPROVED: Spring animation on bottom nav tap ===== */
-    document.querySelectorAll('.mobile-bottom-nav a').forEach(function(link){
-      link.addEventListener('click',function(){
-        /* Remove just-activated from all, add to clicked */
-        document.querySelectorAll('.mobile-bottom-nav a').forEach(function(l){
-          l.classList.remove('just-activated');
-        });
-        /* Small delay so active class is set first, then we add just-activated */
-        setTimeout(()=>{ this.classList.add('just-activated'); }, 10);
-
-        /* Re-trigger spring on the icon */
-        const icon=this.querySelector('.nav-icon');
-        if(icon){
-          icon.style.animation='none';
-          void icon.offsetWidth;
-          icon.style.animation='icon-spring 0.55s cubic-bezier(0.34,1.56,0.64,1)';
-          setTimeout(function(){icon.style.animation='';},560);
-        }
-      });
-    });
-
     /* Touch ripple on cards */
     const rippleTargets=document.querySelectorAll(
       '.education-card,.certificate-card,.skill-card,.project-card,.stat-box,.contact-card,.pub-card'
@@ -229,7 +176,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         `;
         el.style.position='relative';
         el.style.overflow='hidden';
-        el.appendChild(ripple);
+        if(el.firstChild){el.insertBefore(ripple,el.firstChild);}else{el.appendChild(ripple);}
         setTimeout(function(){ripple.remove();},600);
       },{passive:true});
     });
