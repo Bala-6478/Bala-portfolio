@@ -730,3 +730,60 @@
       .hamburger{display:none !important;}
       .nav-island nav{display:flex !important;}
     }
+
+    /* =====================================================
+       PRELOADER
+    ===================================================== */
+    html.is-loading,html.is-loading body{overflow:hidden !important;height:100%;}
+    #preloader{
+      position:fixed;inset:0;z-index:99999;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      background:var(--bg);
+      transition:opacity 0.6s ease,visibility 0.6s ease;
+    }
+    #preloader::before{
+      content:"";position:absolute;inset:-20vh -10vw;
+      background:var(--grad);pointer-events:none;
+      animation:rgb-hue 15s linear infinite;
+    }
+    #preloader.pl-hide{opacity:0;visibility:hidden;pointer-events:none;}
+    .pl-logo{
+      position:relative;display:flex;align-items:baseline;gap:2px;
+      font-family:'Inter',system-ui,sans-serif;
+      font-size:clamp(38px,8vw,72px);font-weight:800;
+      letter-spacing:-1px;
+      opacity:0;transform:translateY(14px) scale(0.96);
+      animation:pl-logo-in 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.15s forwards;
+    }
+    .pl-logo .pl-b{
+      font-style:italic;color:var(--text);
+    }
+    .pl-logo .pl-v{
+      font-style:italic;
+      background:linear-gradient(90deg,var(--brand),var(--brand-2),var(--brand));
+      background-size:200% auto;
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      animation:bar-shimmer 3s linear infinite,pl-glow-pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes pl-logo-in{to{opacity:1;transform:translateY(0) scale(1);}}
+    @keyframes pl-glow-pulse{
+      0%,100%{filter:drop-shadow(0 0 10px rgba(124,92,255,0.35));}
+      50%{filter:drop-shadow(0 0 22px rgba(49,225,192,0.55));}
+    }
+    .pl-bar-track{
+      position:relative;width:min(260px,60vw);height:4px;border-radius:999px;
+      background:var(--glass);overflow:hidden;margin-top:30px;
+      opacity:0;animation:pl-fade-up 0.6s ease 0.5s forwards;
+    }
+    .pl-bar-fill{
+      position:absolute;left:0;top:0;height:100%;width:0%;border-radius:999px;
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      box-shadow:0 0 12px rgba(124,92,255,0.6);
+      transition:width 0.25s ease;
+    }
+    .pl-status{
+      margin-top:16px;font-size:11px;font-weight:700;letter-spacing:3px;
+      text-transform:uppercase;color:var(--muted);
+      opacity:0;animation:pl-fade-up 0.6s ease 0.65s forwards;
+    }
+    @keyframes pl-fade-up{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
