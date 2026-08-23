@@ -1,8 +1,42 @@
+document.documentElement.classList.add('is-loading');
+
 (function(){emailjs.init({publicKey:"YOUR_PUBLIC_KEY"});})();
 
 
 document.addEventListener('DOMContentLoaded',()=>{
   AOS.init({duration:800,once:true});
+
+  /* ===== PRELOADER ===== */
+  (function(){
+    const pre=document.getElementById('preloader');
+    const fill=document.getElementById('plBarFill');
+    const status=document.getElementById('plStatus');
+    if(!pre) return;
+    const messages=['Loading Portfolio...','Preparing Projects...','Almost Ready...'];
+    let pct=0,mi=0;
+    status.textContent=messages[0];
+    const iv=setInterval(()=>{
+      pct+=Math.random()*18+6;
+      if(pct>=96){pct=96;clearInterval(iv);}
+      fill.style.width=pct+'%';
+      const stage=Math.min(messages.length-1,Math.floor(pct/34));
+      if(stage!==mi){mi=stage;status.textContent=messages[mi];}
+    },220);
+    function finish(){
+      clearInterval(iv);
+      fill.style.width='100%';
+      status.textContent='Welcome';
+      setTimeout(()=>{
+        pre.classList.add('pl-hide');
+        document.documentElement.classList.remove('is-loading');
+        setTimeout(()=>{ if(pre.parentNode) pre.parentNode.removeChild(pre); },700);
+      },350);
+    }
+    if(document.readyState==='complete'){ setTimeout(finish,600); }
+    else{ window.addEventListener('load',()=>setTimeout(finish,400)); }
+    /* Safety net so it never gets stuck */
+    setTimeout(finish,4000);
+  })();
 
   /* Theme */
   const themeBtn=document.getElementById('themeBtn');
