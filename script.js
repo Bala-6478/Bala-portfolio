@@ -38,16 +38,24 @@ document.addEventListener('DOMContentLoaded',()=>{
     setTimeout(finish,4000);
   })();
 
-  /* Theme */
+  /* Theme — cycles Dark -> Light -> Space -> Dark. Dark & Light behave exactly as before; Space is new/additional. */
   const themeBtn=document.getElementById('themeBtn');
+  const themeOrder=['dark','light','space'];
+  const themeIcons={dark:'fa-moon',light:'fa-sun',space:'fa-meteor'};
   const applyTheme=t=>{
-    if(t==='light'){document.body.classList.add('light-theme');themeBtn.innerHTML='<i class="fa-solid fa-sun"></i>';}
-    else{document.body.classList.remove('light-theme');themeBtn.innerHTML='<i class="fa-solid fa-moon"></i>';}
+    document.body.classList.remove('light-theme','space-theme');
+    if(t==='light'){document.body.classList.add('light-theme');}
+    else if(t==='space'){document.body.classList.add('space-theme');}
+    themeBtn.innerHTML=`<i class="fa-solid ${themeIcons[t]||'fa-moon'}"></i>`;
   };
-  applyTheme(localStorage.getItem('theme')||'dark');
+  let currentTheme=localStorage.getItem('theme')||'dark';
+  if(!themeOrder.includes(currentTheme)) currentTheme='dark';
+  applyTheme(currentTheme);
   themeBtn.addEventListener('click',()=>{
-    const n=document.body.classList.contains('light-theme')?'dark':'light';
-    applyTheme(n);localStorage.setItem('theme',n);
+    const idx=themeOrder.indexOf(currentTheme);
+    currentTheme=themeOrder[(idx+1)%themeOrder.length];
+    applyTheme(currentTheme);
+    localStorage.setItem('theme',currentTheme);
   });
 
   /* Hamburger */
