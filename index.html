@@ -1,7 +1,10 @@
+<!DOCTYPE html>
 <html lang="en"><head>
+  
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="theme-color" content="#0b0d12">
   <title>Balavignesh A — Portfolio</title>
   <link rel="icon" type="image/png" href="Bala.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;display=swap" rel="stylesheet">
@@ -12,6 +15,9 @@
   
 <link rel="stylesheet" href="style.css"></head>
 <body>
+
+<div id="scrollProgress" aria-hidden="true"></div>
+<button id="toTop" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
 <div id="preloader">
   <div class="pl-logo"><span class="pl-b">BALA</span><span class="pl-v">VIGNESH</span></div>
@@ -40,13 +46,13 @@
         </ul>
       </nav>
       <div class="actions">
-        <button class="theme" id="themeBtn" aria-label="Toggle theme" title="Switch theme: Dark / Light / Space"><i class="fa-solid fa-moon"></i></button>
+        <button class="theme" id="themeBtn" aria-label="Toggle theme" title="Switch theme: Dark / Light"><i class="fa-solid fa-moon"></i></button>
         <a href="#contact" class="btn ghost">Hire Me</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </div>
-  
+
   <div class="mobile-menu" id="mobileMenu">
     <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
@@ -68,8 +74,7 @@
         <div data-aos="fade-up" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
           <p class="badge">✦ Frontend Developer</p>
           <h1 class="title">Hey, I'm <span class="accent">Balavignesh</span></h1>
-          
-          <!-- STABLE TYPEWRITER -->
+
           <div class="typewrap" style="justify-content: center;">
             <span class="type-prefix">I'm a</span>
             <span class="type-stable">
@@ -78,9 +83,9 @@
             </span>
             <span class="cursor"></span>
           </div>
-          
+
           <p class="subtitle" style="margin-left: auto; margin-right: auto;">Passionate about building clean, responsive interfaces with delightful micro-interactions.</p>
-          
+
           <div class="cta" style="justify-content: center;">
             <a class="btn" href="https://drive.google.com/file/d/1sCWqp9nnSI-HQfeXC5U_ABDbh0h2mdtb/view?usp=drivesdk" target="_blank">
               <i class="fa-solid fa-file-lines"></i> View Resume
@@ -90,7 +95,7 @@
             </a>
           </div>
         </div>
-        
+
         <div data-aos="zoom-in">
           <div class="card-hero">
             <div class="avatar">
@@ -124,8 +129,8 @@
           <h3><i class="fa-solid fa-rocket"></i> Professional Journey</h3>
           <p>I'm a dedicated developer with a strong foundation in building responsive, high-performance web applications. My expertise spans HTML, CSS, JavaScript, and Java, enabling me to tackle challenges across the full development stack. I am passionate about crafting seamless user experiences and writing clean, maintainable code using Agile methodologies.</p>
           <div class="stat-boxes">
-            <div class="stat-box"><div class="number">1+</div><div class="label">Years of Growth</div></div>
-            <div class="stat-box"><div class="number">10+</div><div class="label">Projects Shipped</div></div>
+            <div class="stat-box"><div class="number" data-count="1" data-suffix="+">1+</div><div class="label">Years of Growth</div></div>
+            <div class="stat-box"><div class="number" data-count="10" data-suffix="+">10+</div><div class="label">Projects Shipped</div></div>
           </div>
         </div>
         <div class="about-contact-wrap" data-aos="fade-left">
@@ -215,52 +220,63 @@
       <p class="section-sub" data-aos="fade-right" data-aos-delay="100">A selection of my professional work categorized by type.</p>
       <div class="project-filters" data-aos="fade-up">
         <button class="filter-btn active" data-target="all">All</button>
-        <button class="filter-btn" data-target="npm">NPM Package</button>
+        <button class="filter-btn" data-target="fullstack">Full Stack</button>
         <button class="filter-btn" data-target="web">Web App</button>
         <button class="filter-btn" data-target="design">Design</button>
       </div>
       <div class="projects-grid">
-        <div class="project-card" data-category="web" data-aos="fade-up">
+
+        <!-- FULL STACK: Computer Shop -->
+        <div class="project-card" data-category="fullstack" data-aos="fade-up">
+          <div class="project-type-badge type-fullstack">Full Stack</div>
+          <div class="project-header"><div class="project-icon p-icon-shop"><i class="fa-solid fa-desktop"></i></div><div class="title-group"><h3>Computer Shop</h3></div></div>
+          <p class="description">A full stack computer shop application for browsing products, managing inventory and handling customer orders.</p>
+          <div class="project-tech"><span class="tech-tag">Full Stack</span><span class="tech-tag">Responsive UI</span><span class="tech-tag">Netlify</span></div>
+          <div class="project-footer"><a href="https://sencomputer.netlify.app/" class="project-btn demo-btn" target="_blank" rel="noopener">Demo</a></div>
+        </div>
+
+        <!-- FULL STACK: TaskFlow Z -->
+        <div class="project-card" data-category="fullstack" data-aos="fade-up" data-aos-delay="60">
+          <div class="project-type-badge type-fullstack">Full Stack</div>
+          <div class="project-header"><div class="project-icon p-icon-task"><i class="fa-solid fa-list-check"></i></div><div class="title-group"><h3>TaskFlow Z</h3></div></div>
+          <p class="description">A full stack task management app to plan, organize and track daily work with a clean and smooth workflow.</p>
+          <div class="project-tech"><span class="tech-tag">Full Stack</span><span class="tech-tag">Task Manager</span><span class="tech-tag">Netlify</span></div>
+          <div class="project-footer"><a href="https://newtaskflowz.netlify.app/" class="project-btn demo-btn" target="_blank" rel="noopener">Demo</a></div>
+        </div>
+
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="120">
           <div class="project-type-badge type-web">Web App</div>
           <div class="project-header"><div class="project-icon p-icon-npm"><i class="fa-solid fa-qrcode"></i></div><div class="title-group"><h3>QR Code generator</h3></div></div>
           <p class="description">A secure and efficient utility for generating and managing QR codes with a focus on data privacy and integrity.</p>
           <div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">JavaScript</span><span class="tech-tag">CSS3</span></div>
           <div class="project-footer"><a href="https://balavignesh2025.neocities.org/Project/QR%20CODE%20/QR" class="project-btn demo-btn" target="_blank">Demo</a><a href="https://github.com/Bala-6478/QRCode_Secure.git" class="project-btn code-btn" target="_blank">Code</a></div>
         </div>
-        
-        <div class="project-card" data-category="npm" data-aos="fade-up" data-aos-delay="60">
-          <div class="project-type-badge type-npm">NPM Package</div>
-          <div class="project-header"><div class="project-icon p-icon-planner"><i class="fa-solid fa-calendar-check"></i></div><div class="title-group"><h3>Skill_Planner</h3></div></div>
-          <p class="description">An intuitive application designed to help users structure their learning paths and track skill acquisition progress.</p>
-          <div class="project-tech"><span class="tech-tag">TypeScript</span><span class="tech-tag">JavaScript</span><span class="tech-tag">CSS3</span></div>
-          <div class="project-footer"><a href="https://skill-planner-l2fa.onrender.com" class="project-btn demo-btn" target="_blank">Demo</a><a href="https://github.com/Bala-6478/Skill_Planner.git" class="project-btn code-btn" target="_blank">Code</a></div>
-        </div>
-        
-        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="120">
+
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="180">
           <div class="project-type-badge type-web">Web App</div>
           <div class="project-header"><div class="project-icon p-icon-1"><i class="fa-solid fa-film"></i></div><div class="title-group"><h3>Media Converter</h3></div></div>
           <p class="description">High-speed, browser-side media conversion utility supporting multiple file formats without server uploads.</p>
           <div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">JavaScript</span><span class="tech-tag">FFmpeg.js</span></div>
           <div class="project-footer"><a href="https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20kit" class="project-btn demo-btn" target="_blank">Demo</a><a href="#" class="project-btn code-btn" target="_blank">Code</a></div>
         </div>
-        
-        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="180">
+
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="240">
           <div class="project-type-badge type-web">Web App</div>
           <div class="project-header"><div class="project-icon p-icon-2"><i class="fa-solid fa-laptop-code"></i></div><div class="title-group"><h3>Portfolio Builder</h3></div></div>
           <p class="description">A dynamic, interactive tool that allows users to seamlessly build, customize, and preview professional personal portfolio websites.</p>
           <div class="project-tech"><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span></div>
           <div class="project-footer"><a href="https://balavignesh2025.neocities.org/web%20apps%20/portfolio_builder/portfolio_builder_v2" class="project-btn demo-btn" target="_blank">Demo</a><a href="#" class="project-btn code-btn" target="_blank">Code</a></div>
         </div>
-        
-        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="240">
+
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
           <div class="project-type-badge type-web">Web App</div>
           <div class="project-header"><div class="project-icon p-icon-3"><i class="fa-solid fa-file-zipper"></i></div><div class="title-group"><h3>Web ZIP Utility</h3></div></div>
           <p class="description">Streamlined utility for compressing and extracting ZIP files directly within the client interface.</p>
           <div class="project-tech"><span class="tech-tag">JSZip</span><span class="tech-tag">File API</span><span class="tech-tag">Web API</span></div>
           <div class="project-footer"><a href="https://balavignesh2025.neocities.org/Project/Web%20ZIP%20Utility/zip_utility_v2" class="project-btn demo-btn" target="_blank">Demo</a><a href="#" class="project-btn code-btn" target="_blank">Code</a></div>
         </div>
-        
-        <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="300">
+
+        <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="360">
           <div class="project-type-badge type-design">Design</div>
           <div class="project-header"><div class="project-icon p-icon-4"><i class="fa-solid fa-crow"></i></div><div class="title-group"><h3>Angry Birds</h3></div></div>
           <p class="description">Build the ultimate flock to defeat the piggies and save the eggs.</p>
