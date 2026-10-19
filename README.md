@@ -1,6 +1,6 @@
 # Bala-portfolio
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/90e3d07d-4c09-414c-a47f-93f6fd59534a" />
+<img width="1366" height="768" alt="image" src="Screenshot.png" />
 
 ## open my portfolio link:   
   
